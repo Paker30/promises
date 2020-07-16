@@ -1,3 +1,6 @@
+const { promisify } = require("util");
+const setTimeoutPromise = promisify(setTimeout);
+
 const getFive = () => Promise.resolve(5);
 const addTwo = (number) => Promise.resolve(number + 2);
 const remotePrint = (message) => {
@@ -6,7 +9,7 @@ const remotePrint = (message) => {
 };
 const printLocally = (message) => {
     console.log(`Here is your message: ${message}`);
-    return Promise.resolve(message);
+    return setTimeoutPromise(4000, message);
 }
 
 (async () => {
