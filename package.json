@@ -1,0 +1,20 @@
+{
+  "name": "iterations",
+  "version": "1.0.0",
+  "description": "",
+  "main": "iterations.js",
+  "scripts": {
+    "start:await": "node examples/await.js",
+    "start:all-together-async": "node examples/all-together-async.js",
+    "start-iterations": "node examples/iterations/iterations.js",
+    "start-iterations:break": "node examples/iterations/iterations-break.js",
+    "start-iterations:catch": "node examples/iterations/iterations-catch.js",
+    "start-iterations:server": "node examples/iterations/server.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "lodash": "^4.17.21"
+  }
+}

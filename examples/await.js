@@ -14,7 +14,7 @@ const findSong = (filter) => {
 
 const saveSong = (song) => {
     //save song
-    console.log(`Save song: ${song.name}`);
+    console.log(`Save song: ${song.name} from ${song.album}`);
     const savedInfo = {
         id: '1234abcd',
         date: new Date(),
@@ -31,7 +31,7 @@ const saveSong = (song) => {
         const updatedSong = { ...song, album: 'Welcome Interstate Managers' };
         const dbInfo = await saveSong(updatedSong);
         const otherSong = await findSong({ name: 'Stacy\'s Mom' });
-        console.log(`Here is the song I really wanted: ${otherSong.name}`);
+        console.log(`Here is the song I really wanted: ${otherSong.name} by ${otherSong.author}`);
     }
     catch (error) {
         console.error('Ups there has been an error');
